@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/clinic-beauty/static/js/main.c9b9a503.js",
+    "static/js/787.36c1a319.chunk.js": "/clinic-beauty/static/js/787.36c1a319.chunk.js",
+    "static/media/slider-background.png": "/clinic-beauty/static/media/slider-background.e38167d1e1491c166c70.png",
+    "static/media/background3.png": "/clinic-beauty/static/media/background3.dba8b2dd10fc85d2e4b9.png",
+    "static/media/background2.png": "/clinic-beauty/static/media/background2.12165d3deae1f4701b44.png",
+    "static/media/aboutus.png": "/clinic-beauty/static/media/aboutus.c3952b827ec3a75f9ffc.png",
+    "static/media/avatar2.png": "/clinic-beauty/static/media/avatar2.c43af7d1d5361e434fa5.png",
+    "static/media/contactanimations.png": "/clinic-beauty/static/media/contactanimations.95529349a013d2478f79.png",
+    "static/media/frame1.png": "/clinic-beauty/static/media/frame1.00cfeabecfe7112ebee1.png",
+    "static/media/avatar3.png": "/clinic-beauty/static/media/avatar3.f9edd7106497a567f4b8.png",
+    "static/media/avatar1.png": "/clinic-beauty/static/media/avatar1.97dbe1c8c50abe5681fb.png",
+    "static/media/card2.png": "/clinic-beauty/static/media/card2.8b15f4e284c5fd64b565.png",
+    "static/media/card1.png": "/clinic-beauty/static/media/card1.cb9342d64735d7fdee09.png",
+    "static/media/card3.png": "/clinic-beauty/static/media/card3.17703f5ffedd10ad91a6.png",
+    "static/media/footer-background.png": "/clinic-beauty/static/media/footer-background.817d5f75d98411ec555c.png",
+    "index.html": "/clinic-beauty/index.html",
+    "main.c9b9a503.js.map": "/clinic-beauty/static/js/main.c9b9a503.js.map",
+    "787.36c1a319.chunk.js.map": "/clinic-beauty/static/js/787.36c1a319.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c9b9a503.js"
+  ]
+}
