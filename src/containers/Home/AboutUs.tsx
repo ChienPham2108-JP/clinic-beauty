@@ -1,10 +1,13 @@
-import { Button, Box, Typography } from '@material-ui/core';
+import { Button, Box } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import playBtn from '../../assets/images//play-button.png';
 import aboutUsImg from '../../assets/images/aboutus.png';
 import background2 from '../../assets/images/background2.png';
+import Heading from '../../components/Heading';
+import Subject from '../../components/Subject';
+import Description from '../../components/Description';
 
 const useStyles = makeStyles({
   aboutUs: {
@@ -135,23 +138,21 @@ const useStyles = makeStyles({
     height: 'auto',
   },
 });
-
 function AboutUs() {
   const classes = useStyles();
+
   return (
     <Box className={classes.aboutUs}>
-      <Typography variant="h2" className={classes.aboutTitle}>
-        About Us
-      </Typography>
       <Box className={classes.aboutWrapper}>
         <Box className={classes.aboutInfo}>
-          <Box className={classes.aboutHeading}>We are the best beauty clinic</Box>
+          <Subject margin="0 0 12px 0">About Us</Subject>
+          <Heading margin="0 0 12px 0">We are the best beauty clinic</Heading>
           <Box className={classes.aboutDesc}>
-            <span className={classes.aboutDesc1}>
+            <Description margin="0 0 28px 0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas
               volutpat facilisi eu libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius tellus in suspendisse
               placerat.
-            </span>
+            </Description>
             <span>Id dui erat sed quam tellus in purus. Pellentesque congue fringilla cras tellus enim.</span>
           </Box>
           <Box className={classes.aboutAtion}>

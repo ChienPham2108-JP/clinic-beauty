@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     transition: '.15s cubic-bezier(.2,.6,.6,1)',
     cursor: 'pointer',
     '&:hover': {
-      boxShadow: '0 25px 50px 25px #F7F7FF',
+      boxShadow: '0px 25px 50px 25px #F7F7FF',
       transform: 'translate3d(0,-4px,0)',
     },
     '@media (max-width: 1200px)': {
@@ -60,10 +60,12 @@ const useStyles = makeStyles({
   },
 
   wrapCard: {
-    width: '33.33%',
+    width: '398px',
+    maxWidth: '398px',
     padding: '0 27.5px',
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1200px)': {
       width: '50%',
+      maxWidth: 'initial',
     },
     '@media (max-width: 768px)': {
       marginBottom: '36px',
@@ -75,11 +77,11 @@ const useStyles = makeStyles({
 const ServiceCard = ({ img, heading, desc }: serviceCardProps) => {
   const classes = useStyles();
   return (
-    <Box className={classes.wrapCard}>
-      <Box className={classes.servicesCard}>
-        <img className={classes.servicesCardImg} width="166" height="166" src={img} alt="Beauty consultation" />
-        <Box className={classes.servicesCardHeading}>{heading}</Box>
-        <Box className={classes.servicesCardDesc}>{desc}</Box>
+    <Box className={`${classes.wrapCard}`}>
+      <Box className={`${classes.servicesCard}`}>
+        <img className={`${classes.servicesCardImg}`} src={img} alt="Beauty consultation" />
+        <Box className={`${classes.servicesCardHeading}`}>{heading}</Box>
+        <Box className={`${classes.servicesCardDesc}`}>{desc}</Box>
       </Box>
     </Box>
   );

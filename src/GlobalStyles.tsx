@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -42,7 +43,35 @@ const GlobalStyle = createGlobalStyle`
   input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #C5C5C5;
   opacity: 1; /* Firefox */
-}
+  }
+
+  div.bottomInfo {
+    margin: 0 -18.5px;
+  }
+
+  .bottomInfo .infoWrap {
+    margin: 0 18.5px;
+  }
+
+  .bottomInfo .infoCard {
+    padding-top: 79px;
+    padding-bottom: 71px;
+  }
+
+  .bottomInfo .infoImg {
+    width: 65px;
+    height: auto;
+    margin-bottom: 46px;
+  }
+  .bottomInfo .inforPosition {
+    margin-bottom: 15px;
+  }
+  .bottomInfo .infoHeading {
+    margin-bottom: 6px;
+  }
+  .bottomInfo .infoDesc {
+    margin-bottom: 0;
+  }
 `;
 
 export default GlobalStyle;

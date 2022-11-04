@@ -2,39 +2,62 @@ import { List, ListItem, Button, Box } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/main-logo.png';
-import styled from 'styled-components';
-
-const Header = styled.header<{ scrollNav?: boolean }>`
-  max-width: 1440px;
-  padding: 40px 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  margin: 0 auto;
-  background: ${({ scrollNav }) => (scrollNav ? 'rgba(255, 255, 255, 0.97)' : 'transparent')};
-  box-shadow: ${({ scrollNav }) => (scrollNav ? '0 25px 50px 25px #f7f7ff' : 'none')};
-
-  @media (max-width: 1200px) {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
-
-  @media (max-width: 992px) {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  @media (max-width: 576px) {
-    padding: 16px;
-  }
-`;
+import logo from '../../../assets/images/main-logo.png';
 
 const useStyles = makeStyles({
+  header: {
+    maxWidth: '1440px',
+    padding: '40px 0',
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    left: 0,
+    zIndex: 10,
+    margin: '0 auto',
+
+    '@media (max-width: 1200px)': {
+      paddingLeft: '36px',
+      paddingRight: '36px',
+    },
+
+    '@media (max-width: 992px)': {
+      paddingLeft: '32px',
+      paddingRight: '32px',
+      paddingTop: '10px',
+      paddingBottom: '10px',
+    },
+
+    '@media (max-width: 576px)': {
+      padding: '16px',
+    },
+  },
+  headerScroll: {
+    maxWidth: '1440px',
+    padding: '40px 0',
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    left: 0,
+    zIndex: 10,
+    margin: '0 auto',
+    background: 'rgba(255, 255, 255, 0.97)',
+
+    '@media (max-width: 1200px)': {
+      paddingLeft: '36px',
+      paddingRight: '36px',
+    },
+
+    '@media (max-width: 992px)': {
+      paddingLeft: '32px',
+      paddingRight: '32px',
+      paddingTop: '10px',
+      paddingBottom: '10px',
+    },
+
+    '@media (max-width: 576px)': {
+      padding: '16px',
+    },
+  },
   siteBar: {
     maxWidth: '1140px',
     width: '100%',
@@ -151,8 +174,8 @@ export default function AppbarDesktop({ toggle, isOpen }: IAppbarDesktopProps) {
   }, []);
 
   return (
-    <Header scrollNav={scrollNav}>
-      <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }} className={classes.siteBar}>
+    <Box className={scrollNav ? classes.headerScroll : classes.header}>
+      <Box className={classes.siteBar}>
         <Link to={'/'}>
           <img className={classes.mainLogo} src={logo} width="263.83" height="63" alt="logo" />
         </Link>
@@ -164,27 +187,27 @@ export default function AppbarDesktop({ toggle, isOpen }: IAppbarDesktopProps) {
               </Link>
             </ListItem>
             <ListItem className={classes.listItemAbout}>
-              <Link className={classes.menuLink} to="/">
+              <Link className={classes.menuLink} to="/about">
                 About
               </Link>
             </ListItem>
             <ListItem className={classes.listItemService}>
-              <Link className={classes.menuLink} to="/">
+              <Link className={classes.menuLink} to="/service">
                 Service
               </Link>
             </ListItem>
             <ListItem className={classes.listItemGallery}>
-              <Link className={classes.menuLink} to="/">
+              <Link className={classes.menuLink} to="/gallery">
                 Gallery
               </Link>
             </ListItem>
             <ListItem className={classes.listItemBlog}>
-              <Link className={classes.menuLink} to="/">
+              <Link className={classes.menuLink} to="/blog">
                 Blog
               </Link>
             </ListItem>
             <ListItem className={classes.listItemContact}>
-              <Link to="/">
+              <Link to="/contact">
                 <Button variant="contained" className={classes.ContactBtn}>
                   Contact
                 </Button>
@@ -198,6 +221,6 @@ export default function AppbarDesktop({ toggle, isOpen }: IAppbarDesktopProps) {
           </svg>
         </div>
       </Box>
-    </Header>
+    </Box>
   );
 }

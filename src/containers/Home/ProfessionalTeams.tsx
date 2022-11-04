@@ -1,13 +1,51 @@
 import { Box } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+
+import BoxSection from '../../components/BoxSection';
 import avatar1 from '../../assets/images/avatar1.png';
 import avatar2 from '../../assets/images/avatar2.png';
 import avatar3 from '../../assets/images/avatar3.png';
 import twitter from '../../assets/images/twitter.png';
 import facebook from '../../assets/images/facebook.png';
 import instagram from '../../assets/images/instagram.png';
+import CenterTitleDesc from '../../components/CenterTitleDesc';
+
+const teamData = [
+  {
+    id: 1,
+    img: avatar1,
+    position: 'Surgeon',
+    heading: 'Briyan Nevalli',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit',
+    social1: twitter,
+    social2: facebook,
+    social3: instagram,
+    center: false,
+  },
+  {
+    id: 2,
+    img: avatar2,
+    position: 'Dermatologist',
+    heading: 'Bella sebastian',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit',
+    social1: twitter,
+    social2: facebook,
+    social3: instagram,
+    center: true,
+  },
+  {
+    id: 3,
+    img: avatar3,
+    position: 'Stylist expert',
+    heading: 'Lilly Adams',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit',
+    social1: twitter,
+    social2: facebook,
+    social3: instagram,
+    center: false,
+  },
+];
 
 const useStyles = makeStyles({
   team: {
@@ -26,7 +64,9 @@ const useStyles = makeStyles({
       padding: '0 16px',
     },
   },
-  teamTop: {},
+  teamTop: {
+    marginBottom: '87px',
+  },
   teamTitle: {
     fontWeight: 600,
     lineHeight: '20px',
@@ -181,74 +221,26 @@ function Team() {
   return (
     <Box className={classes.team}>
       <Box className={classes.teamTop}>
-        <Box className={classes.teamTitle}>Professional Teams</Box>
-        <Box className={classes.teamHeading}>The Professional expert</Box>
-        <Box className={classes.teamDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.</Box>
+        <CenterTitleDesc
+          subject="Professional Teams"
+          heading="The Professional expert"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
+        />
       </Box>
       <Box className={classes.teamBottom}>
-        <Box className={classes.staffWrap}>
-          <Box className={classes.staffCard}>
-            <img src={avatar1} alt="" width="146" height="146" className={classes.staffCardImg} />
-            <Box className={classes.staffCardPosition}>Surgeon</Box>
-            <Box className={classes.staffCardName}>Briyan Nevalli</Box>
-            <Box className={classes.staffCardDesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
-            </Box>
-            <Box className={classes.staffCardContacts}>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={twitter} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={facebook} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={instagram} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-            </Box>
-          </Box>
-        </Box>
-        <Box className={classes.staffWrapCenter}>
-          <Box className={classes.staffCardCenter}>
-            <img src={avatar2} alt="" width="146" height="146" className={classes.staffCardImg} />
-            <Box className={classes.staffCardPosition}>Dermatologist</Box>
-            <Box className={classes.staffCardName}>Bella sebastian</Box>
-            <Box className={classes.staffCardCenterDesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
-            </Box>
-            <Box className={classes.staffCardContacts}>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={twitter} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={facebook} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={instagram} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-            </Box>
-          </Box>
-        </Box>
-        <Box className={classes.staffWrap}>
-          <Box className={classes.staffCard}>
-            <img src={avatar3} alt="" width="146" height="146" className={classes.staffCardImg} />
-            <Box className={classes.staffCardPosition}>Stylist expert</Box>
-            <Box className={classes.staffCardName}>Lilly Adams</Box>
-            <Box className={classes.staffCardDesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
-            </Box>
-            <Box className={classes.staffCardContacts}>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={twitter} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={facebook} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-              <Link to="" className={classes.staffCardSocial}>
-                <img src={instagram} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-            </Box>
-          </Box>
-        </Box>
+        {teamData.map((item) => (
+          <BoxSection
+            key={item.id}
+            img={item.img}
+            position={item.position}
+            heading={item.heading}
+            desc={item.desc}
+            social1={item.social1}
+            social2={item.social2}
+            social3={item.social3}
+            center={item.center}
+          />
+        ))}
       </Box>
     </Box>
   );

@@ -2,18 +2,18 @@ import { List, ListItem, Box, Typography } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import footerBackground from '../../assets/images/footer-background.png';
-import footerLogo from '../../assets/images/footerlogo.png';
-import facebookF from '../../assets/images/facebook-f.png';
-import twitterF from '../../assets/images/twitter-f.png';
-import linkedinF from '../../assets/images/linkedin-in.png';
-import youtubeF from '../../assets/images/youtube-f.png';
-import instagramF from '../../assets/images/instagram-f.png';
+import footerBackground from '../../../assets/images/footer-background.png';
+import footerLogo from '../../../assets/images/footerlogo.png';
+import facebookF from '../../../assets/images/facebook-f.png';
+import twitterF from '../../../assets/images/twitter-f.png';
+import linkedinF from '../../../assets/images/linkedin-in.png';
+import youtubeF from '../../../assets/images/youtube-f.png';
+import instagramF from '../../../assets/images/instagram-f.png';
 
 const useStyles = makeStyles({
   footer: {
     position: 'relative',
-    marginTop: '58px',
+    marginTop: '69.66px',
   },
   footerBackground: {
     position: 'absolute',
@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   footerWrapper: {
     maxWidth: '1140px',
     margin: '0 auto',
-    paddingTop: '237px',
+    paddingTop: '225.34px',
     paddingBottom: '89.77px',
     '@media (max-width: 1200px)': {
       paddingLeft: '36px',
@@ -251,22 +251,22 @@ function Footer() {
                 </Link>
               </ListItem>
               <ListItem className={classes.footerItem}>
-                <Link className={classes.footerLink} to={'/'}>
+                <Link className={classes.footerLink} to={'/about'}>
                   About
                 </Link>
               </ListItem>
               <ListItem className={classes.footerItem}>
-                <Link className={classes.footerLink} to={'/'}>
+                <Link className={classes.footerLink} to={'/service'}>
                   Services
                 </Link>
               </ListItem>
               <ListItem className={classes.footerItem}>
-                <Link className={classes.footerLink} to={'/'}>
+                <Link className={classes.footerLink} to={'/gallery'}>
                   Gallery
                 </Link>
               </ListItem>
               <ListItem className={classes.footerItem}>
-                <Link className={classes.footerLink} to={'/'}>
+                <Link className={classes.footerLink} to={'/team'}>
                   Team
                 </Link>
               </ListItem>
@@ -288,12 +288,12 @@ function Footer() {
                 </Link>
               </ListItem>
               <ListItem className={classes.footerItem}>
-                <Link className={classes.footerLink} to={'/'}>
+                <Link className={classes.footerLink} to={'/blog'}>
                   Blog
                 </Link>
               </ListItem>
               <ListItem className={classes.footerItem}>
-                <Link className={classes.footerLink} to={'/'}>
+                <Link className={classes.footerLink} to={'/contact'}>
                   Contact
                 </Link>
               </ListItem>

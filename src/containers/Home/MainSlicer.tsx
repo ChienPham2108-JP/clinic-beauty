@@ -1,4 +1,4 @@
-import { Button, Box, Container, Typography } from '@material-ui/core';
+import { Button, Box } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ import sliderBackground from '../../assets/images/slider-background.png';
 const useStyles = makeStyles({
   mainSlider: {
     maxWidth: '1140px',
-    margin: '263px auto 0',
+    margin: '263px auto 131px',
     padding: 0,
     '@media (max-width: 1200px)': {
       paddingLeft: '36px',
@@ -25,15 +25,21 @@ const useStyles = makeStyles({
   },
   upperSlider: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    alignItem: 'center',
     '@media (max-width: 992px)': {
       flexDirection: 'column',
       alignItems: 'center',
     },
   },
   wrapText: {
+    maxWidth: '474px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     '@media (max-width: 1200px)': {
       width: '100%',
+      maxWidth: 'initial',
     },
   },
   sliderHeading: {
@@ -43,7 +49,6 @@ const useStyles = makeStyles({
     lineHeight: '60px',
     letterSpacing: 0,
     color: 'var(--text-color)',
-    marginTop: '53px',
     '@media (max-width: 992px)': {
       marginTop: 0,
       textAlign: 'center',
@@ -142,12 +147,10 @@ function MainSlider() {
   const classes = useStyles();
   return (
     <>
-      <Container className={classes.mainSlider}>
+      <Box className={classes.mainSlider}>
         <Box className={classes.upperSlider}>
           <Box className={classes.wrapText}>
-            <Typography variant="h1" className={classes.sliderHeading}>
-              Clinic & beauty consultant
-            </Typography>
+            <h1 className={classes.sliderHeading}>Clinic & beauty consultant</h1>
             <Box className={classes.sliderDesc}>
               It is a long established fact that a reader will be by the readable content of a page.
             </Box>
@@ -167,7 +170,7 @@ function MainSlider() {
         <Box className={classes.wrapImg}>
           <img src={sliderBackground} className={classes.background} alt="slider background" />
         </Box>
-      </Container>
+      </Box>
     </>
   );
 }
