@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core';
 interface IHeadingProps {
   children: string;
   margin: string;
+  secondary: boolean;
 }
 
 const useStyles = makeStyles({
@@ -16,13 +17,19 @@ const useStyles = makeStyles({
       marginRight: 'auto !important',
     },
   },
+  secondaryHeading: {
+    fontWeight: 600,
+    fontSize: '36px',
+    lineHeight: '45px',
+    color: 'var(--white-color)',
+  },
 });
 
-const Heading = ({ children, margin }: IHeadingProps) => {
+const Heading = ({ children, margin, secondary }: IHeadingProps) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.heading} style={{ margin: margin }}>
+    <div className={secondary ? classes.secondaryHeading : classes.heading} style={{ margin: margin }}>
       {children}
     </div>
   );

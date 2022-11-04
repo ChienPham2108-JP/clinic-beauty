@@ -5,7 +5,7 @@ import contactAnimations from '../../assets/images/contactanimations.png';
 import Subject from '../../components/Subject';
 import Heading from '../../components/Heading';
 import Description from '../../components/Description';
-import { reverse } from 'dns/promises';
+import contactBackground from '../../assets/images/background-contactpage.png';
 
 const useStyles = makeStyles({
   contactUs: {
@@ -73,6 +73,17 @@ const useStyles = makeStyles({
       width: '100%',
     },
   },
+  wrapImg: {
+    position: 'absolute',
+    top: '84px',
+    width: '100vw',
+    height: 'auto',
+    zIndex: -1,
+  },
+  background: {
+    width: '100%',
+    height: 'auto',
+  },
 });
 
 function SectionContactForm() {
@@ -83,7 +94,9 @@ function SectionContactForm() {
       <Box className={classes.contactTop}>
         <Box className={classes.contactLeft}>
           <Subject margin="0 0 12px 0">Contact Us</Subject>
-          <Heading margin="0 98px 14px 0">Contact service for our customers</Heading>
+          <Heading secondary={false} margin="0 98px 14px 0">
+            Contact service for our customers
+          </Heading>
         </Box>
         <Box className={classes.contactDesc}>
           <Description margin="0 20px 0 0">
@@ -96,6 +109,9 @@ function SectionContactForm() {
         <Box className={classes.contactRight}>
           <ContactForm />
         </Box>
+      </Box>
+      <Box className={classes.wrapImg}>
+        <img src={contactBackground} className={classes.background} alt="contact background" />
       </Box>
     </Box>
   );

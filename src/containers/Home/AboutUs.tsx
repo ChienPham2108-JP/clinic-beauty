@@ -146,7 +146,9 @@ function AboutUs() {
       <Box className={classes.aboutWrapper}>
         <Box className={classes.aboutInfo}>
           <Subject margin="0 0 12px 0">About Us</Subject>
-          <Heading margin="0 0 12px 0">We are the best beauty clinic</Heading>
+          <Heading secondary={false} margin="0 0 12px 0">
+            We are the best beauty clinic
+          </Heading>
           <Box className={classes.aboutDesc}>
             <Description margin="0 0 28px 0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas

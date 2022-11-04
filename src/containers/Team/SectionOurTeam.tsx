@@ -1,7 +1,6 @@
-import { Box } from '@material-ui/core';
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { Box, makeStyles } from '@material-ui/core';
 
+import CenterTitleDesc from '../../components/CenterTitleDesc';
 import BoxSection from '../../components/BoxSection';
 import avatar1 from '../../assets/images/avatar1.png';
 import avatar2 from '../../assets/images/avatar2.png';
@@ -9,7 +8,6 @@ import avatar3 from '../../assets/images/avatar3.png';
 import twitter from '../../assets/images/twitter.png';
 import facebook from '../../assets/images/facebook.png';
 import instagram from '../../assets/images/instagram.png';
-import CenterTitleDesc from '../../components/CenterTitleDesc';
 
 const teamData = [
   {
@@ -48,9 +46,9 @@ const teamData = [
 ];
 
 const useStyles = makeStyles({
-  team: {
+  ourTeam: {
     maxWidth: '1085px',
-    margin: '0 auto 144px',
+    margin: '229px auto 153px',
     '@media (max-width: 1200px)': {
       paddingLeft: '36px',
       paddingRight: '36px',
@@ -64,37 +62,12 @@ const useStyles = makeStyles({
       padding: '0 16px',
     },
   },
-  teamTop: {
-    marginBottom: '87px',
-  },
-  teamTitle: {
-    fontWeight: 600,
-    lineHeight: '20px',
-    textAlign: 'center',
-    color: 'var(--primary-color)',
-    marginBottom: 'var(--mt-12)',
-  },
-  teamHeading: {
-    fontWeight: 600,
-    fontSize: '36px',
-    lineHeight: '53px',
-    textAlign: 'center',
-    color: 'var(--text-color)',
-    marginBottom: 'var(--mt-12)',
-  },
-  teamDesc: {
-    textAlign: 'center',
-    letterSpacing: '0.1em',
-    color: 'var(--desc-text-color)',
-    paddingBottom: '27px',
-    marginBottom: '84px',
-  },
-  teamBottom: {
+  wrapBoxSection: {
     display: 'flex',
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '0 -30px',
+    margin: '93px -30px 153px',
     '@media (max-width: 1024px)': {
       flexDirection: 'column',
     },
@@ -110,18 +83,17 @@ const useStyles = makeStyles({
   },
 });
 
-function Team() {
+function SectionOurTeam() {
   const classes = useStyles();
+
   return (
-    <Box className={classes.team}>
-      <Box className={classes.teamTop}>
-        <CenterTitleDesc
-          subject="Professional Teams"
-          heading="The Professional expert"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
-        />
-      </Box>
-      <Box className={classes.teamBottom}>
+    <Box className={classes.ourTeam}>
+      <CenterTitleDesc
+        subject="Our Team"
+        heading="We are Professional"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
+      />
+      <Box className={classes.wrapBoxSection}>
         {teamData.map((item) => (
           <BoxSection
             key={item.id}
@@ -140,4 +112,4 @@ function Team() {
   );
 }
 
-export default Team;
+export default SectionOurTeam;
