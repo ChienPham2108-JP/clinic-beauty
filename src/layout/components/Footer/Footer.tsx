@@ -2,7 +2,7 @@ import { List, ListItem, Box, Typography } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import footerBackground from '../../../assets/images/footer-background.png';
+import footerBackground from '../../../assets/images/footer-bg.svg';
 import footerLogo from '../../../assets/images/footerlogo.png';
 import facebookF from '../../../assets/images/facebook-f.png';
 import twitterF from '../../../assets/images/twitter-f.png';
@@ -14,23 +14,26 @@ const useStyles = makeStyles({
   footer: {
     position: 'relative',
     marginTop: '69.66px',
+    backgroundImage: `url('${footerBackground}')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center top',
   },
-  footerBackground: {
-    position: 'absolute',
-    width: '1440px',
-    height: '100%',
-    textAlign: 'center',
-    margin: '0 auto',
-    zIndex: -1,
-    '@media (max-width: 1200px)': {
-      left: '-270px',
-    },
-  },
-  footerBackgroundImg: {
-    width: '100%',
-    objectPosition: 'right',
-    height: '100%',
-  },
+  // footerBackground: {
+  //   position: 'absolute',
+  //   width: '1440px',
+  //   height: '100%',
+  //   textAlign: 'center',
+  //   margin: '0 auto',
+  //   zIndex: -1,
+  //   '@media (max-width: 1200px)': {
+  //     left: '-270px',
+  //   },
+  // },
+  // footerBackgroundImg: {
+  //   width: '100%',
+  //   objectPosition: 'right',
+  //   height: '100%',
+  // },
   footerWrapper: {
     maxWidth: '1140px',
     margin: '0 auto',
@@ -220,9 +223,9 @@ function Footer() {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
-      <Box className={classes.footerBackground}>
+      {/* <Box className={classes.footerBackground}>
         <img src={footerBackground} className={classes.footerBackgroundImg} alt="slider background" />
-      </Box>
+      </Box> */}
       <Box className={classes.footerWrapper}>
         <Box className={classes.topFooter}>
           <Box className={classes.companyContact}>

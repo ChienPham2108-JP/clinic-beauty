@@ -18,10 +18,6 @@ const useStyles = makeStyles({
     backgroundColor: 'var(--white-color)',
     transition: '.15s cubic-bezier(.2,.6,.6,1)',
     cursor: 'pointer',
-    '&:hover': {
-      boxShadow: '0px 25px 50px 25px #F7F7FF',
-      transform: 'translate3d(0,-4px,0)',
-    },
     '@media (max-width: 1200px)': {
       marginBottom: '36px',
       '&:last-child': {
