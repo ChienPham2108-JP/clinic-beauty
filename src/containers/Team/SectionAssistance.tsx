@@ -33,6 +33,7 @@ const profileData = [
 
 const useStyles = makeStyles({
   assistance: {
+    position: 'relative',
     marginBottom: '125px',
   },
   profiles: {

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { useEffect } from 'react';
 
 import { SectionContactForm, SectionContactInfo } from '../containers/Contact';

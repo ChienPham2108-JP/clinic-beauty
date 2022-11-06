@@ -28,6 +28,7 @@ const useStyles = makeStyles({
   staffWrapCenter: {
     width: '420px',
     margin: '0 30px',
+    background: 'var(--white-color)',
     '@media (max-width: 1024px)': {
       width: '100%',
       padding: '90px 60px',

@@ -1,4 +1,4 @@
-import { Button, Box } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
@@ -8,6 +8,7 @@ import background2 from '../../assets/images/background2.png';
 import Heading from '../../components/Heading';
 import Subject from '../../components/Subject';
 import Description from '../../components/Description';
+import CustomButton from '../../components/CustomButton';
 
 const useStyles = makeStyles({
   aboutUs: {
@@ -102,9 +103,13 @@ const useStyles = makeStyles({
     alignItems: 'center',
     fontWeight: 600,
     letterSpacing: '0.1em',
+    marginLeft: '44px',
     color: 'var(--desc-text-color)',
     '&:hover': {
       textDecoration: 'underline',
+    },
+    '@media (max-width: 1200px)': {
+      margin: '28px 0 0',
     },
   },
   playBtn: {
@@ -159,7 +164,8 @@ function AboutUs() {
           </Box>
           <Box className={classes.aboutAtion}>
             <Link to={'/'}>
-              <Button className={classes.learnMoreBtn}>Learn More</Button>
+              {/* <Button className={classes.learnMoreBtn}>Learn More</Button> */}
+              <CustomButton padding="15.18px 47.08px">Learn More</CustomButton>
             </Link>
             <Link to={'/'} className={classes.watchCompat}>
               <img src={playBtn} className={classes.playBtn} alt="Play" />

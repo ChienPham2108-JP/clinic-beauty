@@ -72,6 +72,29 @@ const GlobalStyle = createGlobalStyle`
   .bottomInfo .infoDesc {
     margin-bottom: 0;
   }
+
+  button.btn {
+    color: var(--white-color);
+    display: inline-block;
+    font-size: 16px;
+    background: var(--primary-color);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    border-radius: 50px;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+  }
+
+  button.btn:hover {
+    background: var(--primary-color);
+    
+  }
+
+  .active {
+    color: var(--white-color);
+    background-color: #172176
+  }
+  
 `;
 
 export default GlobalStyle;

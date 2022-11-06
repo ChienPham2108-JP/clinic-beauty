@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-
-import AboutUs from '../containers/Home/AboutUs';
+import { SectionAbout } from '../containers/About';
 
 function About() {
   useEffect(() => {
@@ -9,7 +8,7 @@ function About() {
 
   return (
     <>
-      <AboutUs />
+      <SectionAbout />
     </>
   );
 }

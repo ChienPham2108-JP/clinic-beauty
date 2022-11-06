@@ -2,6 +2,7 @@ import { Box, makeStyles } from '@material-ui/core';
 
 import CenterTitleDesc from '../../components/CenterTitleDesc';
 import BoxSection from '../../components/BoxSection';
+import background from '../../assets/images/team-background1.png';
 import avatar1 from '../../assets/images/avatar1.png';
 import avatar2 from '../../assets/images/avatar2.png';
 import avatar3 from '../../assets/images/avatar3.png';
@@ -47,6 +48,7 @@ const teamData = [
 
 const useStyles = makeStyles({
   ourTeam: {
+    position: 'relative',
     maxWidth: '1085px',
     margin: '229px auto 153px',
     '@media (max-width: 1200px)': {
@@ -81,6 +83,17 @@ const useStyles = makeStyles({
       paddingRight: '20px',
     },
   },
+  backgroundWrap: {
+    position: 'absolute',
+    top: 0,
+    right: '-150px',
+    zIndex: -1,
+  },
+  background: {
+    objectFit: 'contain',
+    width: '100%',
+    height: 'auto',
+  },
 });
 
 function SectionOurTeam() {
@@ -88,6 +101,9 @@ function SectionOurTeam() {
 
   return (
     <Box className={classes.ourTeam}>
+      <Box className={classes.backgroundWrap}>
+        <img className={classes.background} src={background} alt="Background" />
+      </Box>
       <CenterTitleDesc
         subject="Our Team"
         heading="We are Professional"

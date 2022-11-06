@@ -1,5 +1,6 @@
-import { Box, Button } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import CustomButton from '../CustomButton';
 
 const useStyles = makeStyles({
   contactForm: {
@@ -129,9 +130,10 @@ function ContactForm() {
         <input className={classes.email} type="email" placeholder="Email address" />
         <input className={classes.subjectMessage} type="text" placeholder="Subject message" />
         <textarea defaultValue={'Your inquiry here'} className={classes.inquiry} />
-        <Button className={classes.submitBtn} type="submit">
+        {/* <Button className={classes.submitBtn} type="submit">
           Send Message
-        </Button>
+        </Button> */}
+        <CustomButton padding="15px 64.85px">Send Message</CustomButton>
       </form>
     </>
   );

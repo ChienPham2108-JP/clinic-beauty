@@ -1,9 +1,10 @@
-import { Button, Box } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import frame1 from '../../assets/images/frame1.png';
 import sliderBackground from '../../assets/images/slider-background.png';
+import CustomButton from '../../components/CustomButton';
 
 const useStyles = makeStyles({
   mainSlider: {
@@ -156,7 +157,8 @@ function MainSlider() {
             </Box>
             <Box className={classes.moreDetailsLink}>
               <Link to={'/'}>
-                <Button className={classes.moreDetailsBtn}>More Details</Button>
+                {/* <Button className={classes.moreDetailsBtn}>More Details</Button> */}
+                <CustomButton padding={'15.18px 40.04px'}>More Details</CustomButton>
               </Link>
             </Box>
           </Box>

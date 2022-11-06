@@ -1,9 +1,10 @@
-import { Box, Button } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 import Description from '../../components/Description';
 import Heading from '../../components/Heading';
 import Subject from '../../components/Subject';
+import CustomButton from '../../components/CustomButton';
 
 const useStyles = makeStyles({
   quota: {
@@ -64,9 +65,6 @@ const useStyles = makeStyles({
     whiteSpace: 'nowrap',
     marginRight: '57px',
     letterSpacing: '0.1em',
-    '@media (max-width: 1024px)': {
-      marginRight: 0,
-    },
     '&:hover': {
       background: 'var(--primary-color)',
     },
@@ -94,9 +92,10 @@ function SectionGetTheQuota() {
         </Box>
       </Box>
       <Box className={classes.quotaRight}>
-        <Button variant="contained" className={classes.quotaBtn}>
+        {/* <Button variant="contained" className={classes.quotaBtn}>
           Make an Appointment
-        </Button>
+        </Button> */}
+        <CustomButton padding="15px 51.75px">Make an Appointment</CustomButton>
       </Box>
     </Box>
   );

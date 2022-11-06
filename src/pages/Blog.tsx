@@ -1,5 +1,17 @@
+import { useEffect } from 'react';
+import { Content, SectionTitle } from '../containers/Blog';
+
 function Blog() {
-  return <>Bolg</>;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <>
+      <SectionTitle />
+      <Content />
+    </>
+  );
 }
 
 export default Blog;
