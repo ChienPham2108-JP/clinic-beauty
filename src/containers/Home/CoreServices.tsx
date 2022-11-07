@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    margin: '0 -27.5px',
+    margin: '0 -27.5px -30px',
     textAlign: 'center',
     '@media screen and (max-width: 1200px)': {
       maxWidth: '1140px',

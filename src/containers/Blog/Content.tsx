@@ -14,6 +14,7 @@ import facebook from '../../assets/images/blog-facebook-f.png';
 import twitter from '../../assets/images/blog-twitter-f.png';
 import instagram from '../../assets/images/blog-instagram-f.png';
 import linkedinIn from '../../assets/images/blog-linkedin-in-f.png';
+import { useEffect, useState } from 'react';
 
 const tagData = [
   {
@@ -75,30 +76,6 @@ const postData = [
   },
 ];
 
-const articleData = [
-  {
-    id: 1,
-    img: articleImg1,
-    categoriesName: 'Consultation',
-    heading: 'How much does a consultation cost at our clinic?',
-    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
-  },
-  {
-    id: 2,
-    img: articleImg2,
-    categoriesName: 'Beauty',
-    heading: `Watch out! don't choose the wrong beauty product`,
-    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
-  },
-  {
-    id: 3,
-    img: articleImg3,
-    categoriesName: 'Treatments',
-    heading: 'About skin care you need to know',
-    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
-  },
-];
-
 const useStyles = makeStyles({
   content: {
     maxWidth: '1140px',
@@ -141,6 +118,7 @@ const useStyles = makeStyles({
     gap: '14px',
     justifyContent: 'flex-end',
     marginRight: '83px',
+    cursor: 'pointer',
   },
   page: {
     display: 'flex',
@@ -181,13 +159,94 @@ const useStyles = makeStyles({
   },
 });
 
+const articleData = [
+  {
+    id: 1,
+    img: articleImg1,
+    categoriesName: 'Consultation',
+    heading: 'How much does a consultation cost at our clinic?',
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 2,
+    img: articleImg2,
+    categoriesName: 'Beauty',
+    heading: `Watch out! don't choose the wrong beauty product`,
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 3,
+    img: articleImg3,
+    categoriesName: 'Treatments',
+    heading: 'About skin care you need to know',
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 4,
+    img: articleImg1,
+    categoriesName: 'Page2',
+    heading: 'How much does a consultation cost at our clinic?',
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 5,
+    img: articleImg2,
+    categoriesName: 'Page2',
+    heading: `Watch out! don't choose the wrong beauty product`,
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 6,
+    img: articleImg3,
+    categoriesName: 'Page2',
+    heading: 'About skin care you need to know',
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 7,
+    img: articleImg3,
+    categoriesName: 'Page3',
+    heading: 'About skin care you need to know',
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 8,
+    img: articleImg1,
+    categoriesName: 'Page3',
+    heading: 'How much does a consultation cost at our clinic?',
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+  {
+    id: 9,
+    img: articleImg2,
+    categoriesName: 'Page3',
+    heading: `Watch out! don't choose the wrong beauty product`,
+    desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
+  },
+];
+
+interface IDataArticleData {
+  id: number;
+  img: string;
+  categoriesName: string;
+  heading: string;
+  desc: string;
+}
+
 function Content() {
   const classes = useStyles();
+  const [dataLoad, setDataLoad] = useState<IDataArticleData[]>([]);
+  const [page, setPage] = useState(1);
 
+  useEffect(() => {
+    const dataArticleData = articleData.slice((page - 1) * 3, page * 3);
+
+    setDataLoad(dataArticleData);
+  }, [page]);
   return (
     <Box className={classes.content}>
       <Box className={classes.article}>
-        {articleData.map((item) => (
+        {dataLoad.map((item) => (
           <Article
             key={item.id}
             img={item.img}
@@ -197,9 +256,17 @@ function Content() {
           />
         ))}
         <Box className={classes.pageNavigation}>
-          <Box className={`${classes.page} active`}>1</Box>
-          <Box className={classes.page}>2</Box>
-          <Box className={classes.page}>3</Box>
+          {[1, 2, 3].map((pageItem) =>
+            pageItem === page ? (
+              <Box className={`${classes.page} active`} onClick={() => setPage(pageItem)}>
+                {pageItem}
+              </Box>
+            ) : (
+              <Box className={classes.page} onClick={() => setPage(pageItem)}>
+                {pageItem}
+              </Box>
+            ),
+          )}
         </Box>
       </Box>
       <Box className={classes.widget}>

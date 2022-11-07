@@ -14,10 +14,15 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     padding: '59px 30px 52px',
+    background: 'var(--white-color)',
+    marginBottom: '30px',
     borderRadius: '42px',
     backgroundColor: 'var(--white-color)',
     transition: '.15s cubic-bezier(.2,.6,.6,1)',
     cursor: 'pointer',
+    '&:hover': {
+      boxShadow: '0px 25px 50px 25px #F7F7FF',
+    },
     '@media (max-width: 1200px)': {
       marginBottom: '36px',
       '&:last-child': {

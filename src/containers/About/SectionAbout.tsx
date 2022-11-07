@@ -46,6 +46,7 @@ const useStyles = makeStyles({
     padding: '226px 0',
     background: `url('${background1}')`,
     backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
