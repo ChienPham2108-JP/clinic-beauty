@@ -22,6 +22,10 @@ const useStyles = makeStyles({
     fontSize: '36px',
     lineHeight: '45px',
     color: 'var(--white-color)',
+    display: '-webkit-box',
+    '-webkit-line-clamp': 2,
+    '-webkit-box-orient': 'vertical',
+    overflow: 'hidden',
   },
 });
 

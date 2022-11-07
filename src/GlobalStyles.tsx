@@ -94,7 +94,18 @@ const GlobalStyle = createGlobalStyle`
     color: var(--white-color);
     background-color: #172176
   }
+
+  div.MuiAccordion-root {
+    position: static;
+    box-shadow: none;
+  }
+  div.MuiAccordionSummary-root.Mui-expanded {
+    min-height: initial;
+}
   
+  div.MuiAccordionSummary-content.Mui-expanded {
+    margin: 16px 0;
+}
 `;
 
 export default GlobalStyle;

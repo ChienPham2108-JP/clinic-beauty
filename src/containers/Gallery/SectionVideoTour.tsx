@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import Heading from '../../components/Heading';
 import background2 from '../../assets/images/gallery-background2.png';
 import background1 from '../../assets/images/gallery-background1.png';
-import playBtn from '../../assets/images/gallery-playbtn.png';
+import playBtn from '../../assets/images/transparent-playbtn.png';
 import Description from '../../components/Description';
 
 const useStyles = makeStyles({
