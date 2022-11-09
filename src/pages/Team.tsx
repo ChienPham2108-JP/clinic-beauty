@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import { SectionAssistance, SectionOurTeam, SectionSlogan, SectionOurTestimonials } from '../containers/Team';
 
 import background from '../assets/images/team-background1.png';
+import background1 from '../assets/images/team-bg-bottom1.svg';
+import background2 from '../assets/images/team-bg-bottom2.svg';
 
 const useStyles = makeStyles({
   wrapper: {
@@ -19,6 +21,19 @@ const useStyles = makeStyles({
     objectFit: 'contain',
     width: '100%',
     height: 'auto',
+  },
+  wrapTestimonials: {
+    position: 'relative',
+  },
+  bgWrap1: {
+    position: 'absolute',
+    top: '-118px',
+    left: 0,
+  },
+  bgWrap2: {
+    position: 'absolute',
+    bottom: '-110px',
+    right: 0,
   },
 });
 
@@ -37,7 +52,15 @@ function TeamPage() {
       </Box>
       <SectionAssistance />
       <SectionSlogan />
-      <SectionOurTestimonials />
+      <Box className={classes.wrapTestimonials}>
+        <Box className={classes.bgWrap1}>
+          <img className={classes.background} src={background1} alt="Background" />
+        </Box>
+        <Box className={classes.bgWrap2}>
+          <img className={classes.background} src={background2} alt="Background" />
+        </Box>
+        <SectionOurTestimonials />
+      </Box>
     </>
   );
 }

@@ -1,10 +1,7 @@
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import Heading from '../../components/Heading';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { CustomAccodion } from './components';
 
 const useStyles = makeStyles({
   faq: {
@@ -17,12 +14,12 @@ const useStyles = makeStyles({
       marginRight: 'auto',
     },
     '@media (max-width: 1024px)': {
-      flexDirection: 'column',
-      alignItems: 'center',
+      // flexDirection: 'column',
+      // alignItems: 'center',
       textAlign: 'center',
     },
     '@media (max-width: 992px)': {
-      justifyContent: 'center',
+      // justifyContent: 'center',
       padding: '0 32px',
     },
     '@media (max-width: 576px)': {
@@ -41,6 +38,7 @@ const useStyles = makeStyles({
     margin: '0 auto 68px',
   },
   accordionSummary: {
+    width: '100%',
     padding: '0 19px 0 35px',
     textAlign: 'left',
   },
@@ -68,6 +66,25 @@ const useStyles = makeStyles({
   },
 });
 
+const faqData = [
+  {
+    id: 1,
+    question: 'Is beauty consultation handled thoroughly?',
+  },
+  {
+    id: 2,
+    question: 'Can I be beautiful in an instant time?',
+  },
+  {
+    id: 3,
+    question: 'Are there any side effects to the treatment methods or treatments at this clinic?',
+  },
+  {
+    id: 4,
+    question: 'Do professionals have accreditation in their respective fields?',
+  },
+];
+
 function SectionFAQ() {
   const classes = useStyles();
 
@@ -79,7 +96,10 @@ function SectionFAQ() {
         </Heading>
       </Box>
       <Box className={classes.lineTitle}></Box>
-      <Accordion>
+      {faqData.map((item) => (
+        <CustomAccodion key={item.id} question={item.question} />
+      ))}
+      {/* <Accordion style={{ width: '100%' }}>
         <AccordionSummary
           className={classes.accordionSummary}
           expandIcon={<ExpandMoreIcon />}
@@ -170,7 +190,7 @@ function SectionFAQ() {
             ullamcorper eget nulla
           </div>
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
     </Box>
   );
 }

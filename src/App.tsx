@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
+import Home2 from './pages/Home2';
 import About from './pages/About';
 import Service from './pages/Service';
 import Gallery from './pages/Gallery';
@@ -21,6 +22,14 @@ function App() {
           element={
             <Layout>
               <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/home2"
+          element={
+            <Layout>
+              <Home2 />
             </Layout>
           }
         />

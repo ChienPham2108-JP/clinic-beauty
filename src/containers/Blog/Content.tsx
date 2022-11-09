@@ -258,11 +258,11 @@ function Content() {
         <Box className={classes.pageNavigation}>
           {[1, 2, 3].map((pageItem) =>
             pageItem === page ? (
-              <Box className={`${classes.page} active`} onClick={() => setPage(pageItem)}>
+              <Box key={pageItem} className={`${classes.page} active`} onClick={() => setPage(pageItem)}>
                 {pageItem}
               </Box>
             ) : (
-              <Box className={classes.page} onClick={() => setPage(pageItem)}>
+              <Box key={pageItem} className={classes.page} onClick={() => setPage(pageItem)}>
                 {pageItem}
               </Box>
             ),

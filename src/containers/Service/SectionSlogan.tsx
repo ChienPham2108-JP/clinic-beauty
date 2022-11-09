@@ -9,14 +9,19 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   slogan: {
-    padding: '182px 0',
+    // padding: '182px 0',
+    width: '100%',
+    height: '529px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginBottom: '116px',
     background: `url('${background2}')`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    '@media (max-width: 1024px)': {
-      padding: '99.5px 0',
-    },
+    // '@media (max-width: 1024px)': {
+    //   padding: '99.5px 0',
+    // },
   },
   wrapContent: {
     maxWidth: '1140px',

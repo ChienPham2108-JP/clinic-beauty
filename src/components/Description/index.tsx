@@ -12,10 +12,10 @@ const useStyles = makeStyles({
     lineHeight: '24px',
     letterSpacing: '0.1em',
     color: 'var(--desc-text-color)',
-    display: '-webkit-box',
-    '-webkit-line-clamp': 2,
-    '-webkit-box-orient': 'vertical',
-    overflow: 'hidden',
+    // display: '-webkit-box',
+    // '-webkit-line-clamp': 2,
+    // '-webkit-box-orient': 'vertical',
+    // overflow: 'hidden',
   },
 });
 
