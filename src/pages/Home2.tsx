@@ -31,6 +31,7 @@ const useStyles = makeStyles({
     position: 'absolute',
     bottom: '-108.08px',
     left: 0,
+    zIndex: -1,
   },
 });
 

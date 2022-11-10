@@ -14,8 +14,14 @@ const useStyles = makeStyles({
     boxShadow: '10px 13px 80px 14px #F2F4FF',
     borderRadius: '50px 50px 50px 50px',
     marginBottom: '133px',
+    overflow: 'hidden',
+    '@media (max-width: 1024px)': {
+      borderRadius: '60px',
+    },
   },
-  wrapImg: {},
+  wrapImg: {
+    width: '100%',
+  },
   aticleImg: {
     width: '100%',
     height: 'auto',

@@ -36,9 +36,22 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
     gap: '68px',
     justifyContent: 'space-between',
+    '@media (max-width: 1200px)': {
+      gap: '40px',
+    },
   },
   imgWrap: {
     '@media (max-width: 1200px)': {
+      width: '100%',
+    },
+  },
+  imgWrap1: {
+    '@media (max-width: 1200px)': {
+      order: -1,
+      width: '46%',
+    },
+    '@media (max-width: 576px)': {
+      order: 'initial',
       width: '100%',
     },
   },
@@ -57,7 +70,7 @@ function SectionOurServices() {
         <CenterTitleDesc subject="Our Services" heading="We focus on your beauty" desc="Lorem ipsum dolor sit amet" />
       </Box>
       <Box className={classes.imageSection}>
-        <Box className={classes.imgWrap}>
+        <Box className={classes.imgWrap1}>
           <img className={classes.imgService} src={serviceImg1} alt="Service" />
         </Box>
         <Box className={classes.imgWrap}>
@@ -66,7 +79,7 @@ function SectionOurServices() {
         <Box className={classes.imgWrap}>
           <img className={classes.imgService} src={serviceImg3} alt="Service" />
         </Box>
-        <Box className={classes.imgWrap}>
+        <Box className={classes.imgWrap1}>
           <img className={classes.imgService} src={serviceImg4} alt="Service" />
         </Box>
       </Box>

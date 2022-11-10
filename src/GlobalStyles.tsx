@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0.65;
   }
 
-  input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  input::placeholder, textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #C5C5C5;
   opacity: 1; /* Firefox */
   }

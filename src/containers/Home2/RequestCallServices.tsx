@@ -54,6 +54,7 @@ const useStyles = makeStyles({
     },
   },
   input: {
+    overflow: 'hidden',
     background: '#FFFFFF',
     border: '1px solid #D9DDFE',
     borderRadius: '25px',

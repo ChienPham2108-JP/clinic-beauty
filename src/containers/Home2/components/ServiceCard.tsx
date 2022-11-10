@@ -6,6 +6,7 @@ import angleDoubleRight from '../../../assets/images/home2-angle-double-right.pn
 
 const useStyles = makeStyles({
   servicesCard: {
+    overflow: 'hidden',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',

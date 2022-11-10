@@ -58,6 +58,9 @@ const useStyles = makeStyles({
       flexDirection: 'column-reverse',
       textAlign: 'center',
       gap: '100px',
+      '& img': {
+        display: 'none',
+      },
     },
   },
   contactLeft: {

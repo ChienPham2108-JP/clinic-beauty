@@ -6,6 +6,7 @@ import angleDoubleRight from '../../../assets/images/home2-angle-double-right.pn
 
 const useStyles = makeStyles({
   servicesCard: {
+    overflow: 'hidden',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
     },
     '@media (max-width: 1200px)': {
       marginBottom: '36px',
-      borderRadius: '50px',
+      borderRadius: '35px',
       '&:last-child': {
         marginBottom: 0,
       },

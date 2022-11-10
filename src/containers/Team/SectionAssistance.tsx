@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/styles';
 
 import CenterTitleDesc from '../../components/CenterTitleDesc';
 import Profile from '../../components/Profile';
-import profileImg1 from '../../assets/images/profile-img-1.png';
-import profileImg2 from '../../assets/images/profile-img-2.png';
-import profileImg3 from '../../assets/images/profile-img-3.png';
+import profileImg1 from '../../assets/images/profile-img-1.svg';
+import profileImg2 from '../../assets/images/profile-img-2.svg';
+import profileImg3 from '../../assets/images/profile-img-3.svg';
 
 const profileData = [
   {

@@ -45,6 +45,11 @@ const useStyles = makeStyles({
     alignItems: 'center',
     '@media (max-width: 1024px)': {
       maxWidth: 'initial',
+      paddingTop: '91px',
+      paddingBottom: '96px',
+      background: 'var(--white-color)',
+      borderRadius: '42px',
+      boxShadow: '0px 25px 50px 25px #F7F7FF',
     },
     '@media (max-width: 992px)': {
       paddingLeft: '20px',

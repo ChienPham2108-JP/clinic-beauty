@@ -30,6 +30,18 @@ const useStyles = makeStyles({
   leftProfile: {
     '@media (max-width: 1200px)': {
       marginBottom: '36px',
+      width: '100%',
+      padding: '0 140px',
+    },
+    '@media (max-width: 1024px)': {
+      padding: '0 100px',
+    },
+
+    '@media (max-width: 768px)': {
+      padding: '0 50px',
+    },
+    '@media (max-width: 576px)': {
+      padding: '0 16px',
     },
   },
   rightProfile: {

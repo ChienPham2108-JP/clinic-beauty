@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const MobileMenuModal = styled.div<{ isOpen?: boolean }>`
   z-index: 11;
@@ -28,7 +29,7 @@ export const MobileMainMenu = styled.nav<{ isOpen?: boolean }>`
   }
 `;
 
-export const MainLogoLink = styled.a`
+export const MainLogoLink = styled(Link)`
   max-width: 200px;
   padding: 20px 0 20px 20px;
   width: 100%;
@@ -59,7 +60,7 @@ export const SideBarItem = styled.li`
   width: 100%;
 `;
 
-export const SideBarLink = styled.a`
+export const SideBarLink = styled(Link)`
   text-decoration: none;
   letter-spacing: 0.1em;
   color: var(--desc-text-color);

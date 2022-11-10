@@ -129,7 +129,7 @@ function ContactForm() {
         </Box>
         <input className={classes.email} type="email" placeholder="Email address" />
         <input className={classes.subjectMessage} type="text" placeholder="Subject message" />
-        <textarea defaultValue={'Your inquiry here'} className={classes.inquiry} />
+        <textarea className={classes.inquiry} placeholder="Your inquiry here" />
         {/* <Button className={classes.submitBtn} type="submit">
           Send Message
         </Button> */}
