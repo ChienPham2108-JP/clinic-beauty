@@ -32,7 +32,8 @@
     "react/jsx-uses-react": "off",
     "react/jsx-uses-vars": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
-    "@typescript-eslint/triple-slash-reference": "off"
+    "@typescript-eslint/triple-slash-reference": "off",
+    "no-unused-vars": ["error", { "vars": "all" }]
   },
   "settings": {
     "react": {
