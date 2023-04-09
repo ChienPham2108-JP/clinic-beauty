@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+import React from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
@@ -144,21 +146,6 @@ const BoxSection = ({ img, position, heading, desc, social1, social2, social3, c
           <Box className={`${center ? classes.staffCardCenterDesc : classes.staffCardDesc}  infoDesc`}>{desc}</Box>
           {social1 ? (
             <Box className={classes.staffCardContacts}>
-              {/* {social1 ? (
-              <Link to="/" className={classes.staffCardSocial}>
-                <img src={social1} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-            ) : undefined}
-            {social2 ? (
-              <Link to="/" className={classes.staffCardSocial}>
-                <img src={social2} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-            ) : undefined}
-            {social3 ? (
-              <Link to="/" className={classes.staffCardSocial}>
-                <img src={social3} alt="Socials" className={classes.staffCardSocialImg} />
-              </Link>
-            ) : undefined} */}
               <Link to="/" className={classes.staffCardSocial}>
                 <img src={social1} alt="Socials" className={classes.staffCardSocialImg} />
               </Link>

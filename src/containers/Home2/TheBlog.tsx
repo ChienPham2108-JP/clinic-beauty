@@ -52,7 +52,7 @@ const blogData = [
   {
     id: 2,
     img: blogImg2,
-    heading: `Watch out! don't choose the wrong beauty product`,
+    heading: "Watch out! don't choose the wrong beauty product",
     desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings ...',
   },
   {

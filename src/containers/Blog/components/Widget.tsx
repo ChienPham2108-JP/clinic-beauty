@@ -1,6 +1,6 @@
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 const useStyles = makeStyles({
   widgetWrap: {

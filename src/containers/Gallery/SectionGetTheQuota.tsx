@@ -54,7 +54,7 @@ const useStyles = makeStyles({
   },
   quotaBtn: {
     textTransform: 'capitalize',
-    fontFamily: `'Poppins',sans-serif`,
+    fontFamily: "'Poppins',sans-serif",
     fontWeight: 600,
     fontSize: '16px',
     color: 'var(--white-color)',

@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 
 const Button1 = withStyles({
   root: {
-    fontFamily: `'Poppins',sans-serif`,
+    fontFamily: "'Poppins',sans-serif",
     fontWeight: 600,
     whiteSpace: 'nowrap',
     fontSize: '16px',
@@ -30,7 +30,7 @@ interface CustomButomProps {
 
 const CustomButton: React.FC<CustomButomProps> = ({ padding, children }) => {
   return (
-    <Button1 className="btn" style={{ padding: padding }}>
+    <Button1 className="btn" style={{ padding }}>
       {children}
     </Button1>
   );

@@ -23,7 +23,7 @@ const Description = ({ children, margin }: IDescriptionProps) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.description} style={{ margin: margin }}>
+    <div className={classes.description} style={{ margin }}>
       {children}
     </div>
   );

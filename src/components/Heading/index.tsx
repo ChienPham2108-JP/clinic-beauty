@@ -33,7 +33,7 @@ const Heading = ({ children, margin, secondary }: IHeadingProps) => {
   const classes = useStyles();
 
   return (
-    <div className={secondary ? classes.secondaryHeading : classes.heading} style={{ margin: margin }}>
+    <div className={secondary ? classes.secondaryHeading : classes.heading} style={{ margin }}>
       {children}
     </div>
   );

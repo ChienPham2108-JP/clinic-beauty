@@ -7,10 +7,10 @@ export const MobileMenuModal = styled.div<{ isOpen?: boolean }>`
   inset: 0;
   background-color: rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-in;
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  opacity: ${({ isOpen }) => (isOpen ?? false ? '100%' : '0')};
+  visibility: ${({ isOpen }) => (isOpen ?? false ? 'visible' : 'hidden')};
   left: 0;
-  left: ${({ isOpen }) => (isOpen ? '0' : '-60%')};
+  left: ${({ isOpen }) => (isOpen ?? false ? '0' : '-60%')};
 `;
 
 export const MobileMainMenu = styled.nav<{ isOpen?: boolean }>`
@@ -19,7 +19,7 @@ export const MobileMainMenu = styled.nav<{ isOpen?: boolean }>`
   bottom: 0;
   top: 0;
   left: -60%;
-  left: ${({ isOpen }) => (isOpen ? '-60%' : '0')};
+  left: ${({ isOpen }) => (isOpen ?? false ? '-60%' : '0')};
   background-color: #fff;
   padding: 16px 0 0 32px;
   transition: left 0.5s ease-in;

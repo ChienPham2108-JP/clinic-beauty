@@ -23,7 +23,7 @@ const ScrollToTop = styled.div<{ visibleGoToTopBtn?: boolean }>`
   right: 65px;
   bottom: 170px;
   cursor: pointer;
-  visibility: ${({ visibleGoToTopBtn }) => (visibleGoToTopBtn ? 'visible' : 'hidden')};
+  visibility: ${({ visibleGoToTopBtn }) => (visibleGoToTopBtn ?? false ? 'visible' : 'hidden')};
   opacity: 1;
 
   &:hover {

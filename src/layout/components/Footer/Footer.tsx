@@ -155,7 +155,7 @@ const useStyles = makeStyles({
     },
     '&::before': {
       position: 'absolute',
-      content: `''`,
+      content: "''",
       borderWidth: '3.775px 4.05px',
       borderStyle: 'solid',
       borderColor: 'transparent transparent transparent #D7DBFF',

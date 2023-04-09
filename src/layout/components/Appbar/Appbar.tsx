@@ -1,8 +1,8 @@
 import { List, ListItem, Box } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+
 import logo from '../../../assets/images/main-logo.png';
 import logoLight from '../../../assets/images/logo-light.svg';
 import CustomButton from '../../../components/CustomButton';
@@ -160,7 +160,7 @@ const useStyles = makeStyles({
   },
   ContactBtn: {
     textTransform: 'capitalize',
-    fontFamily: `'Poppins',sans-serif`,
+    fontFamily: "'Poppins',sans-serif",
     fontWeight: 600,
     fontSize: '16px',
     color: 'var(--white-color)',

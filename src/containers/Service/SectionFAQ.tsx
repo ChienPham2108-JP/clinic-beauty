@@ -33,6 +33,7 @@ const useStyles = makeStyles({
   lineTitle: {
     width: '40px',
     height: '0px',
+    background: '#FF64AE',
     border: '2.5px solid #FF64AE',
     borderRadius: '20px',
     margin: '0 auto 68px',

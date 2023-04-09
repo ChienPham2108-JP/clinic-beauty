@@ -1,6 +1,5 @@
-import { Box } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 import { useEffect } from 'react';
-import { makeStyles } from '@material-ui/core';
 
 import {
   SectionBeautyConsultation,

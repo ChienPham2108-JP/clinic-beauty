@@ -171,7 +171,7 @@ const articleData = [
     id: 2,
     img: articleImg2,
     categoriesName: 'Beauty',
-    heading: `Watch out! don't choose the wrong beauty product`,
+    heading: "Watch out! don't choose the wrong beauty product",
     desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
   },
   {
@@ -192,7 +192,7 @@ const articleData = [
     id: 5,
     img: articleImg2,
     categoriesName: 'Page2',
-    heading: `Watch out! don't choose the wrong beauty product`,
+    heading: "Watch out! don't choose the wrong beauty product",
     desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
   },
   {
@@ -220,7 +220,7 @@ const articleData = [
     id: 9,
     img: articleImg2,
     categoriesName: 'Page3',
-    heading: `Watch out! don't choose the wrong beauty product`,
+    heading: "Watch out! don't choose the wrong beauty product",
     desc: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
   },
 ];
@@ -258,11 +258,23 @@ function Content() {
         <Box className={classes.pageNavigation}>
           {[1, 2, 3].map((pageItem) =>
             pageItem === page ? (
-              <Box key={pageItem} className={`${classes.page} active`} onClick={() => setPage(pageItem)}>
+              <Box
+                key={pageItem}
+                className={`${classes.page} active`}
+                onClick={() => {
+                  setPage(pageItem);
+                }}
+              >
                 {pageItem}
               </Box>
             ) : (
-              <Box key={pageItem} className={classes.page} onClick={() => setPage(pageItem)}>
+              <Box
+                key={pageItem}
+                className={classes.page}
+                onClick={() => {
+                  setPage(pageItem);
+                }}
+              >
                 {pageItem}
               </Box>
             ),

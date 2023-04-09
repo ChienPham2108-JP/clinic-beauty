@@ -18,7 +18,7 @@ const Subject = ({ children, margin }: ISubjectProps) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.subjectName} style={{ margin: margin }}>
+    <div className={classes.subjectName} style={{ margin }}>
       {children}
     </div>
   );

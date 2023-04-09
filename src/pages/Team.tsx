@@ -1,5 +1,5 @@
-import { Box } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
+
 import { useEffect } from 'react';
 import { SectionAssistance, SectionOurTeam, SectionSlogan, SectionOurTestimonials } from '../containers/Team';
 
